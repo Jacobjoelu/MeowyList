@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up to Meowy Newsletter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="../public/styles.css" type="text/css" />
+  </head>
+  <body class="bg-gray-200 flex flex-col justify-center items-center">
+    <header class="flex items-center justify-center">
+      <h1 class="text-center font-bebas text-2xl">Sign Up To MeowyList</h1>
+    </header>
+    <div class="container flex flex-col items-center">
+      <div class="flex flex-col justify-center items-center">
+        <form
+          action="/"
+          method="POST"
+          class="flex flex-col justify-center bg-gray-50 items-center py-2 rounded gap-1 w-100 shadow-md"
+        >
+          <label for="fname">
+            <input
+              type="text"
+              id="fname"
+              name="firstName"
+              placeholder="First name"
+              class="rounded shadow-inner pl-2 placeholder-gray-400 h-8 placeholder:italic"
+              required
+            />
+          </label>
+          <label for="lname">
+            <input
+              type="text"
+              id="lname"
+              name="lastName"
+              placeholder="Last name"
+              class="rounded shadow-inner pl-2 placeholder-gray-400 h-8 placeholder:italic"
+              required
+            />
+          </label>
+          <label for="email">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              class="rounded shadow-inner pl-2 placeholder-gray-400 h-8 placeholder:italic"
+              required
+            />
+          </label>
+          <button
+            type="submit"
+            class="bg-gray-700 hover:bg-gray-500 text-white font-bebas shadow-sm px-2 py-1 text-xl rounded"
+          >
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
