@@ -14,8 +14,8 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "/public")));
-app.use(express.static(path.join(__dirname, "/dist")));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "dist")));
 
 mongoose
   .connect(
@@ -33,7 +33,7 @@ const subscriberSchema = new mongoose.Schema({
 const Subscriber = mongoose.model("Subscriber", subscriberSchema);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/index.html"));
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.post("/", async (req, res) => {
@@ -81,10 +81,10 @@ app.post("/", async (req, res) => {
 
     await axios(url, options);
     console.log("Subscribed user to Mailchimp");
-    res.sendFile(path.join(__dirname, "/dist/signedUp.html"));
+    res.sendFile(path.join(__dirname, "dist", "signedUp.html"));
   } catch (err) {
     console.error("Error occurred:", err);
-    res.sendFile(path.join(__dirname, "/dist/Failed.html"));
+    res.sendFile(path.join(__dirname, "dist", "Failed.html"));
   }
 });
 
